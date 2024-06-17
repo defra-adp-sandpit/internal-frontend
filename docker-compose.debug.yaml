@@ -1,0 +1,3 @@
+services:
+  ? test-internal-frontend
+  : command: npm run start:debug

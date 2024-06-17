@@ -1,0 +1,10 @@
+services:
+  ? test-internal-frontend
+  : build:
+      context: .
+      target: production
+    image: test-internal-frontend
+    container_name: test-internal-frontend
+    environment:
+      APPINSIGHTS_CLOUDROLE: test-internal-frontend-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
